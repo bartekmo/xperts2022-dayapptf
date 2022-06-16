@@ -23,5 +23,10 @@ resource "google_compute_instance" "websrv" {
 
   network_interface {
     subnetwork = google_compute_subnetwork.demo.self_link
+    access_config {
+
+    }
   }
+
+  metadata_startup_script = file("websrv_startup_script.sh")
 }
