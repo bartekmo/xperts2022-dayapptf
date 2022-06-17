@@ -1,3 +1,4 @@
+/*
 resource "google_compute_network" "demo" {
   name                    = "${var.prefix}-vpc"
   auto_create_subnetworks = false
@@ -40,3 +41,4 @@ resource "google_compute_instance" "websrv" {
 
   metadata_startup_script = file("websrv_startup_script.sh")
 }
+*/
