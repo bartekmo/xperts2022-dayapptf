@@ -10,6 +10,15 @@ resource "google_compute_subnetwork" "demo" {
   region = var.region
 }
 
+resource "google_compute_firewall" "allow_http" {
+  name = "${var.prefix}-allow-http"
+  network = google_compute_network.demo.self_link
+  allow {
+    protocol = "TCP"
+    ports = ["80"]
+  }
+}
+
 resource "google_compute_instance" "websrv" {
   name = "${var.prefix}-websrv"
   machine_type = "e2-standard-2"
