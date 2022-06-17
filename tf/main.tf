@@ -12,7 +12,7 @@ resource "google_compute_subnetwork" "demo" {
 
 resource "google_compute_instance" "websrv" {
   name = "${var.prefix}-websrv"
-  machine_type = "e2_standard-2"
+  machine_type = "e2-standard-2"
   zone = "${var.region}-b"
 
   boot_disk {
