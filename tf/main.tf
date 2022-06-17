@@ -17,6 +17,7 @@ resource "google_compute_firewall" "allow_http" {
     protocol = "TCP"
     ports = ["80"]
   }
+  source_ranges = ["0.0.0.0/0"]
 }
 
 resource "google_compute_instance" "websrv" {
