@@ -43,7 +43,7 @@ function render(dow) {
 
 app.use( ctx => {
   if ( ctx.request.url === '/' ) {
-    ctx.body = render('Monday');
+    ctx.body = render(process.env.TODAY);
   } else {
     let fileName = ctx.request.url.split('/').slice(-1)[0];
     const src = fs.createReadStream( fileName );
