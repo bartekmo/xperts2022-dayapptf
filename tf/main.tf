@@ -17,7 +17,7 @@ resource "google_compute_instance" "websrv" {
 
   boot_disk {
     initialize_params {
-      image = "ubuntu_os_cloud/ubuntu-2004-lts"
+      image = "ubuntu-os-cloud/ubuntu-2004-lts"
     }
   }
 
